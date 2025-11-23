@@ -29,7 +29,7 @@ const Home = () => {
   }, []);
 
   const educations = [
-    { degree: 'Computers and Informatics', institution: 'Studying', from: '', to: '' },
+    { degree: 'Computers and Informatics', institution: '', from: '', to: '' },
   ];
 
   return (
