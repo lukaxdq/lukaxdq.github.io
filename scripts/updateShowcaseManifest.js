@@ -54,6 +54,30 @@ function buildManifest() {
 
     fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2));
     console.log(`Updated showcase manifest with ${entries.length} item(s).`);
+
+    // Copy showcase folder to public for React app
+    const PUBLIC_SHOWCASE_DIR = path.resolve(__dirname, '..', 'public', 'showcase');
+    if (!fs.existsSync(PUBLIC_SHOWCASE_DIR)) {
+        fs.mkdirSync(PUBLIC_SHOWCASE_DIR, { recursive: true });
+    }
+    if (!fs.existsSync(path.join(PUBLIC_SHOWCASE_DIR, 'media'))) {
+        fs.mkdirSync(path.join(PUBLIC_SHOWCASE_DIR, 'media'), { recursive: true });
+    }
+
+    // Copy manifest to public
+    fs.copyFileSync(MANIFEST_PATH, path.join(PUBLIC_SHOWCASE_DIR, 'manifest.json'));
+
+    // Copy media files to public
+    const mediaFiles = fs.readdirSync(MEDIA_DIR);
+    mediaFiles.forEach(file => {
+        const srcPath = path.join(MEDIA_DIR, file);
+        const destPath = path.join(PUBLIC_SHOWCASE_DIR, 'media', file);
+        if (fs.statSync(srcPath).isFile()) {
+            fs.copyFileSync(srcPath, destPath);
+        }
+    });
+
+    console.log('Copied showcase to public directory.');
 }
 
 try {
