@@ -1,0 +1,54 @@
+/* Discord.css */
+.discord-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  background: #1F202A;
+  color: #B8B9B9;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 80px 20px 20px;
+  user-select: none;
+}
+
+.discord-content {
+  background: #23242F;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.discord-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.discord-content h2 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.discord-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.discord-content a {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.discord-content a:hover {
+  text-decoration: underline;
+}
+
+.discord-details {
+  margin-top: 20px;
+}
+
