@@ -32,7 +32,7 @@ jobs:
           node scripts/updateShowcaseManifest.js
           echo "manifest-generated=true" >> "$GITHUB_OUTPUT"
 
-      - name: Commit and push changes
+      - name: Commit and push changess
         if: steps.generate_manifest.outputs.manifest-generated == 'true'
         run: |
           if git diff --quiet; then
