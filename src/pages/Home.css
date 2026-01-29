@@ -24,6 +24,128 @@
   gap: 20px;
 }
 
+/* Featured Projects Styles */
+.featured-projects-container {
+  background: #23242F;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.featured-item {
+  background: linear-gradient(145deg, #1A1B23 0%, #15161C 100%);
+  border: 1px solid #2A2B36;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featured-item:hover {
+  transform: translateY(-3px);
+  border-color: #3b82f6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.featured-item:hover::before {
+  opacity: 1;
+}
+
+.featured-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.featured-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.featured-badge {
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.featured-badge.active {
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.featured-badge.utility {
+  background: rgba(52, 152, 219, 0.15);
+  color: #3498db;
+  border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.featured-content p {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin: 0 0 15px 0;
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.project-language {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.language-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.language-dot.ts { background-color: #2b7489; }
+.language-dot.js { background-color: #f1e05a; }
+.language-dot.html { background-color: #e34c26; }
+
+.meta-tag {
+  color: #fff;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
 .projects-container {
   background: #23242F;
   padding: 20px;

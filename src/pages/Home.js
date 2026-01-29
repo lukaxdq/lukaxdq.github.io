@@ -41,6 +41,55 @@ const Home = () => {
         <EducationCard educations={educations} />
       </div>
       <div className="right-section">
+        <div className="featured-projects-container">
+          <h2>Featured Projects</h2>
+          <div className="featured-grid">
+            {/* Deepwoken Trader */}
+            <div className="featured-item">
+              <div className="featured-content">
+                <div className="featured-header">
+                  <h3>Deepwoken Trader</h3>
+                  <span className="featured-badge active">Active</span>
+                </div>
+                <p>A comprehensive trading platform for Deepwoken players. Features automated item valuation, secure middleman services, and real-time market data analysis.</p>
+                <div className="project-meta">
+                  <div className="project-language">
+                    <div className="language-dot ts"></div>
+                    <span>TypeScript</span>
+                  </div>
+                  <div className="project-language">
+                    <div className="language-dot js"></div>
+                    <span>JavaScript</span>
+                  </div>
+                  <span className="meta-tag"> High Traffic</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Deepwoken Talents Helper */}
+            <div className="featured-item">
+              <div className="featured-content">
+                <div className="featured-header">
+                  <h3>Deepwoken Talents Helper</h3>
+                  <span className="featured-badge utility">Utility</span>
+                </div>
+                <p>An interactive helper tool for optimizing character builds. Includes talent prerequisite checking, build planning, and synergy recommendations.</p>
+                <div className="project-meta">
+                  <div className="project-language">
+                    <div className="language-dot ts"></div>
+                    <span>TypeScript</span>
+                  </div>
+                  <div className="project-language">
+                    <div className="language-dot html"></div>
+                    <span>HTML</span>
+                  </div>
+                  <span className="meta-tag"> Optimized</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="projects-container">
           <h2>Github Projects</h2>
           <div className="projects-grid">
